@@ -1,0 +1,92 @@
+<html lang="en">
+<head>
+  
+  <!--  Meta  -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css">
+  <title>Task tacker</title>
+
+</head>
+<body>
+  <h1> Add tasks!!! </h1>
+  
+  <div class="appdes">
+  <p id="pp"> First choose a username where all tasks you enter will be saved under. Every time you come back to the site, enter the username and click on the "Load tasks or click to Start". ENJOY :)  </p>
+  </div>
+  
+  <div id="usernamediv" class="load">
+    
+    <p> Enter your username and click on the button below </p>
+    
+    <input type = "text" id = "username" class="text">
+    <br></br>
+    <input type = "button"
+       class = "button"
+       value = "Load tasks or Click to Start"
+       id = "loadtasks"
+       onclick = "loadtasks()">
+    <br></br>
+  <p id="messageb"></p>
+  </div>
+  
+  <div class = "listcore">
+  <br></br>
+  <input type = "button"
+       class = "button"
+       value = "Add to the list"
+       id = "bt1"
+       onclick = "myfuc()">
+  
+   <input type = "button"
+       class = "button"
+       value = "Reset List"
+       id = "bt1"
+       onclick = "myfuc2()">
+  
+  <br> </br>
+  <label for="finput">Task name:</label>  <br> </br>
+  <input type = "text" id = "finput" class="text">
+
+   <br> </br>
+
+  <label for="deadline">Deadline:</label> <br> </br>
+  <input type="date" id="deadline" name="trip-start">
+         
+  <br> </br>
+  
+  <table id="tab1" align="center" style="width:80%">
+       <tr>
+    <th>
+     Tasks to do
+    </th>
+    <th>
+     Deadline
+    </th>
+    <th>
+     Delete
+    </th>  
+    <th>
+     Mark Done
+    </th>
+   </tr>
+  </table>
+
+ <br> </br>
+
+  <table id="tab2" align="center">
+       <tr>
+    <th>
+     Completed Tasks
+    </th>
+   </tr>
+  </table>
+  
+  <div id="div1">
+  </div>
+</div>
+  
+  <!-- Scripts -->
+  <script src="index.js"></script>
+</body>
+</html>
