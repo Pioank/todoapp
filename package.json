@@ -1,0 +1,24 @@
+{
+  "name": "todo-app",
+  "version": "1.0.0",
+  "description": "Todo app AWS test",
+  "main": "index.html",
+  "scripts": {
+    "start": "npm run lite",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lite": "lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pioank/todoapp.git"
+  },
+  "author": "Pavlos Ioannou Katidis",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Pioank/todoapp/issues"
+  },
+  "homepage": "https://github.com/Pioank/todoapp#readme",
+  "devDependencies": {
+    "lite-server": "^2.6.1"
+  }
+}
