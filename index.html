@@ -5,57 +5,113 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <title>Task tacker</title>
 
 </head>
+
+<header class = "jumbotron">
+  <div class="container">
+    <h1> Add tasks!!! </h1>
+  </div>
+</header>
+
 <body>
-  <h1> Add tasks!!! </h1>
   
-  <div class="appdes">
-  <p id="pp"> First choose a username where all tasks you enter will be saved under. Every time you come back to the site, enter the username and click on the "Load tasks or click to Start". ENJOY :)  </p>
-  </div>
-  
-  <div id="usernamediv" class="load">
-    
-    <p> Enter your username and click on the button below </p>
-    
-    <input type = "text" id = "username" class="text">
-    <br></br>
-    <input type = "button"
-       class = "button"
-       value = "Load tasks or Click to Start"
-       id = "loadtasks"
-       onclick = "loadtasks()">
-    <br></br>
-  <p id="messageb"></p>
-  </div>
-  
-  <div class = "listcore">
-  <br></br>
-  <input type = "button"
-       class = "button"
-       value = "Add to the list"
-       id = "bt1"
-       onclick = "myfuc()">
-  
-   <input type = "button"
-       class = "button"
-       value = "Reset List"
-       id = "bt1"
-       onclick = "myfuc2()">
-  
-  <br> </br>
-  <label for="finput">Task name:</label>  <br> </br>
-  <input type = "text" id = "finput" class="text">
+  <div class="container">
 
-   <br> </br>
+    <div class="row justify-content-center">
+      <div class="col-auto">
+        <h2> How to use it</h2>
+        <p id="pp"> First choose a username where all tasks you enter will be saved under. Every time you come back to the site, enter the username and click on the "Load tasks or click to Start". ENJOY :)  </p>
+      </div>
+    </div>
 
-  <label for="deadline">Deadline:</label> <br> </br>
-  <input type="date" id="deadline" name="trip-start">
+    <div class="row justify-content-center">
+        <div class="col-auto"> 
+          <p> <b> Enter your username and click on the button below! </b> </p> 
+      </div> 
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-auto"> 
+        <input type = "text" id = "username" class="text">
+      </div> 
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-auto"> 
+        <div class="d-flex p-3">
+          <input type = "button"
+          class = "button"
+          value = "Load tasks or Click to Start"
+          id = "loadtasks"
+          onclick = "loadtasks()">
+        </div>
+      </div> 
+    </div>
+    
+    <div class="row justify-content-center">
+      <div class="col-auto"> 
+        <p id="messageb"></p>
+      </div> 
+    </div>
+     
+  </div>
+
+  <div class="container" style="border:1px solid #000000;">
+    <div class="row justify-content-center">
+      <div class="d-flex p-2">
+        <p> Type your task and add a deadline below, after that click "Add to the list" </p>
+      </div>
+    </div>
+    
+    <div class="row justify-content-center">
+      
+        <div class="col-auto">
+            <div class="input-group mb-1">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">Task name:</span>
+              </div>
+              <input type = "text" id = "finput">
+            </div>
+      </div>
+        
+      <div class="col-auto">  
+            <div class="input-group mb-1">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon2">Deadline:</span>
+              </div>
+              <input type="date" id="deadline" name="trip-start">
+            </div>
+          </div>
+        
+    </div> 
+
+    <div class="row justify-content-center">
+      <div class="d-flex p-3">
+            <div class="col-auto">
+              <input type = "button"
+                  class = "button"
+                  value = "Add to the list"
+                  id = "bt1"
+                  onclick = "myfuc()">
+                
+              <input type = "button"
+                  class = "button"
+                  value = "Reset List"
+                  id = "bt1"
+                  onclick = "myfuc2()"> 
+            </div>
+      </div>
+    </div>
+  </div>  
+
          
   <br> </br>
+
   
-  <table id="tab1" align="center" style="width:80%">
+  <table class="table table-dark" id="tab1" align="center" style="width:80%">
        <tr>
     <th>
      Tasks to do
@@ -74,7 +130,7 @@
 
  <br> </br>
 
-  <table id="tab2" align="center">
+  <table class="table table-dark" id="tab2" align="center" style="width:80%">
        <tr>
     <th>
      Completed Tasks
@@ -84,9 +140,13 @@
   
   <div id="div1">
   </div>
-</div>
+
   
-  <!-- Scripts -->
-  <script src="index.js"></script>
 </body>
+    <!-- Scripts -->
+    <script src="index.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+ 
 </html>

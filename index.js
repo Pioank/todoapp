@@ -2,6 +2,7 @@
 var id = 0
 document.getElementById('bt1').disabled = true;
 document.getElementById('bt1').style.backgroundColor="grey";
+var username = document.getElementById("username").value;
 
 // adding rows function the depends cmethod PUT or GET it sends or not in the DynamoDB
 function addrowsn(text,cmethod,deadl) {
@@ -123,7 +124,7 @@ function loadtasks() {
   var msg = "hidem";
   myfuc2(msg);
   var cmethod = 'get';
-  var username = document.getElementById("username").value;
+  username = document.getElementById("username").value;
   if (username !== '') {
     document.getElementById('bt1').disabled = false;
     document.getElementById('bt1').style.backgroundColor="#4CAF50";
