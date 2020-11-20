@@ -125,11 +125,10 @@ function loadtasks() {
   myfuc2(msg);
   var cmethod = 'get';
   username = document.getElementById("username").value;
-  if (username !== '') {
+  if (username === '') {
     document.getElementById('bt1').disabled = false;
-    document.getElementById('bt1').style.backgroundColor="#4CAF50";
     message("error","Please add a username");
-  }
+  };
   fetch('https://ausndvnrb7.execute-api.eu-west-2.amazonaws.com/api/getdata/'+ username , {method: 'GET'}) 
     .then(
       function(response) { 
