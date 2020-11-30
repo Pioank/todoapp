@@ -35,8 +35,13 @@
 
     <div class="row justify-content-center">
       <div class="col-auto"> 
-        <input type = "text" id = "username" class="text">
-      </div> 
+        <div class="input-group mb-1">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">Username:</span>
+            <input type = "text" id = "username" class="text">
+          </div>
+        </div> 
+      </div>
     </div>
 
     <div class="row justify-content-center">
@@ -68,13 +73,13 @@
     
     <div class="row justify-content-center">
       
-        <div class="col-auto">
-            <div class="input-group mb-1">
-              <div class="input-group-prepend">
-                <span class="input-group-text" id="basic-addon1">Task name:</span>
-              </div>
-              <input type = "text" id = "finput">
+      <div class="col-auto">
+          <div class="input-group mb-1">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon1">Task name:</span>
             </div>
+            <input type = "text" id = "finput">
+          </div>
       </div>
         
       <div class="col-auto">  
@@ -110,33 +115,37 @@
          
   <br> </br>
 
-  
-  <table class="table table-dark" id="tab1" align="center" style="width:80%">
-       <tr>
-    <th>
-     Tasks to do
-    </th>
-    <th>
-     Deadline
-    </th>
-    <th>
-     Delete
-    </th>  
-    <th>
-     Mark Done
-    </th>
-   </tr>
-  </table>
+<div class="container">
+  <div class="row justify-content-center">
+    <table class="table table-dark" id="tab1" align="center" >
+        <tr>
+      <th>
+      Tasks to do
+      </th>
+      <th>
+      Deadline
+      </th>
+      <th>
+      Delete
+      </th>  
+      <th>
+      Mark Done
+      </th>
+    </tr>
+    </table>
+  </div>
 
- <br> </br>
+  <br> </br>
+  <div class="row justify-content-center">
+      <table class="table table-dark" id="tab2" align="center" >
+          <tr>
+        <th>
+        Completed Tasks
+        </th>
+      </tr>
+      </table>
+  </div>
 
-  <table class="table table-dark" id="tab2" align="center" style="width:80%">
-       <tr>
-    <th>
-     Completed Tasks
-    </th>
-   </tr>
-  </table>
   
   <div id="div1">
   </div>

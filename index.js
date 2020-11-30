@@ -86,7 +86,7 @@ function addrowsn(text,cmethod,deadl) {
 
 // Button Add to the list
 function myfuc() {  
-  var text = document.getElementById("finput").value;
+  var text = (document.getElementById("finput").value).trim();
   var usnm = document.getElementById("username").value;
   var deadl = document.getElementById("deadline").value;
   var cmethod = 'put';
@@ -128,6 +128,8 @@ function loadtasks() {
   if (username === '') {
     document.getElementById('bt1').disabled = false;
     message("error","Please add a username");
+  }else {
+        document.getElementById('bt1').disabled = false;
   };
   fetch('https://ausndvnrb7.execute-api.eu-west-2.amazonaws.com/api/getdata/'+ username , {method: 'GET'}) 
     .then(
@@ -140,7 +142,8 @@ function loadtasks() {
         // Examine the text in the response
         response.json().then(function(data) {
           if (data.Count === 0){
-             message("error","It looks like there are no tasks under that username. Please proceed to add some");
+             message("error","It looks like there are no tasks under that username. Please proceed to add some");     document.getElementById('bt1').disabled = false;
+            document.getElementById('bt1').style.backgroundColor="#4CAF50";
           } else {
            var notasks = data.Count
            message("success","There are " + notasks + " in your list");
