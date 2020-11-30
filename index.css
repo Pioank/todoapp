@@ -1,15 +1,8 @@
-/**
- * index.scss
- * - Add any styles you want here!
- */
-
-
 .load {
   padding: 5px 0px;
   text-align: center;
   border: 1px solid black;
 }
-
 
 .button {
   background-color: #4CAF50; 
@@ -48,12 +41,9 @@
   margin: auto;  
 }
 
-
 th, td {
   height: 50px
 }
-
-
 
 .messageb {
   background-color: lightgrey;
